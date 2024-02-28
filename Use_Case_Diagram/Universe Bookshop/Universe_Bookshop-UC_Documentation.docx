@@ -1,0 +1,243 @@
+Use case documentation
+UC-01
+Use Case Number	UC-01
+Use Case Name	Add Customer
+Actor Involved	Bookshop Staff
+Associated Data Sources	Input from bookshop staff, existing customer database.
+Associated User Interfaces	Staff login; Manage customer section; Customer information form; Confirmation/Error message display.
+Pre-Conditions	 The staff member is logged into the system. 
+Post-Conditions	The new customer is accurately recorded in the system.
+Detailed Description	Bookshop staff login, navigate to manage customer section, fill customer information, enter details, system validation, confirm customer. 
+Alternate Course(s)	Error message if validation fails; Error correction prompt before adding customer again. 
+UC-02
+Use Case Number	UC-02
+Use Case Name	Update Customer
+Actor Involved	Bookshop Staff
+Associated Data Sources	Input from bookshop staff, existing customer database.
+Associated User Interfaces	Staff login; Manage customer section; Customer information form; Confirmation/Error message display.
+Pre-Conditions	 The staff member is logged into the system. 
+Post-Conditions	The customer details are accurately updated in the system.
+Detailed Description	Bookshop staff login, navigate to manage customer section, navigate to existing customer list, update details, system validation.
+Alternate Course(s)	Error message if validation fails; Error correction prompt before updating customer again. 
+
+
+UC-03
+Use Case Number	UC-03
+Use Case Name	Delete Customer
+Actor Involved	Bookshop Staff
+Associated Data Sources	Input from bookshop staff, existing customer database.
+Associated User Interfaces	Staff login; Manage customer section; Customer information form; Confirmation/Error message display.
+Pre-Conditions	 The staff member is logged into the system. 
+Post-Conditions	The customer is no longer present in the system.
+Detailed Description	Bookshop staff login, navigate to manage customer section, navigate to existing customer list, confirm deletion, system validation.
+Alternate Course(s)	Staff cancels deletion during confirmation, system retains customer details. 
+
+UC-04
+Use Case Number	UC-04
+Use Case Name	Review Order Details
+Actor Involved	Bookshop Staff
+Associated Data Sources	Database containing order information about books.
+Associated User Interfaces	Process book order section; List of pending order section, Order information display.
+Pre-Conditions	 The staff is viewing list of pending orders. 
+Post-Conditions	The staff can review details of the specific order.
+Detailed Description	Staff logs in, selects “Process Book Orders”, views pending orders, system displays clear, detailed information.
+Alternate Course(s)	Integration with external shipping and tracking systems for getting real-time details about order.  
+
+
+
+
+UC-05
+Use Case Number	UC-05
+Use Case Name	Display Pending Orders
+Actor Involved	Bookshop Staff
+Associated Data Sources	Database containing order information about books.
+Associated User Interfaces	Process book order section; List of pending order section, Order information display.
+Pre-Conditions	 The staff is logged into the system. 
+Post-Conditions	The staff can look at pending book orders.
+Detailed Description	Staff logs in, selects “Process Book Orders”, views pending orders, system displays clear, detailed information.
+Alternate Course(s)	Order status and details can be cross-referenced with external suppliers’ database.   
+
+UC-06
+Use Case Number	UC-06
+Use Case Name	Process Individual Order
+Actor Involved	Bookshop Staff
+Associated Data Sources	Database containing order information about books.
+Associated User Interfaces	Process book order section; List of pending order section, Order information display.
+Pre-Conditions	 The staff is reviewing the details of the specific order. 
+Post-Conditions	Order status is updated along with relevant details. 
+Detailed Description	Staff processes order, updates status, input shipping details (if required).
+Alternate Course(s)	Integration with third party system for automated tracking and status updates. 
+
+
+
+
+
+UC-07
+Use Case Number	UC-07
+Use Case Name	Adjust Inventory
+Actor Involved	Bookshop Staff
+Associated Data Sources	Inventory database.
+Associated User Interfaces	Process book order section; Inventory status display
+Pre-Conditions	 The staff has processed one or more book orders. 
+Post-Conditions	Inventory is updated with processed book orders. 
+Detailed Description	System adjusts inventory after order processing, staff views updated status. 
+Alternate Course(s)	Integration with supplier database for update on orders and deliveries.  
+
+UC-08
+Use Case Number	UC-08
+Use Case Name	Retrieve Processed Orders
+Actor Involved	Bookshop Staff
+Associated Data Sources	Orders database.
+Associated User Interfaces	Invoice generation section; List of processed orders
+Pre-Conditions	 The staff has processed one or more book orders. 
+Post-Conditions	Inventory is updated with processed book orders. 
+Detailed Description	System selects invoice generation; system displays processed orders for invoice creation.  
+Alternate Course(s)	If no processed orders are found, system provides a message and prompts staff to check.  
+
+
+
+
+
+
+
+UC-09
+Use Case Number	UC-09
+Use Case Name	Verify Order Details
+Actor Involved	Bookshop Staff
+Associated Data Sources	Orders database.
+Associated User Interfaces	Order information display.
+Pre-Conditions	The staff is viewing the list of processed orders.  
+Post-Conditions	Staff has confirmed the accuracy of selected orders.
+Detailed Description	System reviews order details before generating invoices.  
+Alternate Course(s)	In case of discrepancies, prompt generated by system before proceeding for invoice generation. 
+
+UC-10
+Use Case Number	UC-10
+Use Case Name	Generate invoices.
+Actor Involved	Bookshop Staff
+Associated Data Sources	Orders database, Price database
+Associated User Interfaces	Invoice generation section; form for order selection and invoice generation.
+Pre-Conditions	Staff has verified selected order details.
+Post-Conditions	Invoice generated and ready for recording.
+Detailed Description	System reviews order details before generating invoices.  
+Alternate Course(s)	In case of failed invoice generation, system prompts to retry.  
+
+
+
+
+
+
+
+
+UC-11
+Use Case Number	UC-11
+Use Case Name	Update Accounting Information
+Actor Involved	Bookshop Staff
+Associated Data Sources	Invoice and accounting records.
+Associated User Interfaces	Accounting information display.
+Pre-Conditions	Invoices successfully generated.
+Post-Conditions	Financial records updated with new invoices. 
+Detailed Description	System reviews order details before generating invoices.  
+Alternate Course(s)	In case of failed update, system prompts to investigate.  
+
+UC-12
+Use Case Number	UC-12
+Use Case Name	Display current inventory
+Actor Involved	Bookshop Staff
+Associated Data Sources	Inventory database.
+Associated User Interfaces	Inventory management section.
+Pre-Conditions	Staff member is logged into the system.
+Post-Conditions	Staff has up-to-date view of the current inventory.
+Detailed Description	Staff selects “inventory management’, system displays inventory status is real-time as per details asked.  
+Alternate Course(s)	If retrieval fails, the system prompts an alert asking to enter correct details or troubleshoot.  
+
+
+
+
+
+
+
+
+UC-13
+Use Case Number	UC-13
+Use Case Name	Update inventory with new stock.
+Actor Involved	Bookshop Staff
+Associated Data Sources	Inventory database.
+Associated User Interfaces	Inventory management section; input form for entering new stock details.
+Pre-Conditions	Staff member is logged into the system.
+Post-Conditions	Inventory is updated accurately.
+Detailed Description	Staff adds new stock information, ensuring accurate details are entered for every book.  
+Alternate Course(s)	If input validation fails, system prompts to correct errors before updating.  
+
+UC-14
+Use Case Number	UC-14
+Use Case Name	Update inventory from processed orders.
+Actor Involved	Bookshop Staff
+Associated Data Sources	Inventory database, Order database.
+Associated User Interfaces	Inventory management section; Processed orders list.
+Pre-Conditions	Staff member is logged into the system.
+Post-Conditions	Inventory is updated based on processed orders.
+Detailed Description	Staff updates information based on processed orders, maintaining accuracy in stock levels.   
+Alternate Course(s)	If order information is incomplete, system prompts to complete information or resolve issue before updating.  
+
+
+
+
+
+
+UC-15
+Use Case Number	UC-15
+Use Case Name	Initiate data migration process.
+Actor Involved	System administrator
+Associated Data Sources	System deployment status.
+Associated User Interfaces	Admin dashboard.
+Pre-Conditions	The system is ready for deployment.
+Post-Conditions	Data migration process is triggered.
+Detailed Description	Admin triggers data migration process based on system readiness for the process.    
+Alternate Course(s)	If system is not ready, administrator receives an alert to resolve issue before initiating again.  
+
+UC-16
+Use Case Number	UC-16
+Use Case Name	Extract data from manual system.
+Actor Involved	System administrator
+Associated Data Sources	Manual system database.
+Associated User Interfaces	System logs; data extraction interface.
+Pre-Conditions	Data migration process is initiated.
+Post-Conditions	Data is ready for transformation and loading. 
+Detailed Description	System extracts data from manual database for transformation and loading.    
+Alternate Course(s)	If extraction fails, system prompts an error message and for troubleshooting.   
+
+
+
+
+
+
+
+UC-17
+Use Case Number	UC-17
+Use Case Name	Transform and load data into new system.
+Actor Involved	System administrator
+Associated Data Sources	Extracted data from manual database.
+Associated User Interfaces	Transformation and loading interface.
+Pre-Conditions	Data is extracted successfully from the manual system.
+Post-Conditions	All required is successfully migrated.
+Detailed Description	Admin transforms and loads data into the new system, ensuring successful migration completion.
+Alternate Course(s)	If transformation or loading of data fails, then system prompts an error message asking administrator to resolve issue.   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
